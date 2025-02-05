@@ -1,0 +1,198 @@
+* {
+  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+#exercise {
+  display: flex;
+  height: 300px;
+  width: 100%;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+#baseNumber {
+  padding: 5px 10px;
+  font-size: 24px;
+  border: 1px solid #a9a9a9;
+  color: black;
+  border-radius: 8px;
+}
+
+#startButton {
+  background-color: #228b22;
+  position: relative;
+  color: #ffffff;
+  margin-top: 40px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #a9a9a9;
+}
+
+#startButton:disabled {
+  cursor: not-allowed;
+  background-color: #a9a9a9;
+  color: #ffffff;
+}
+#startButton:hover {
+  background: #afeeee;
+  color: #010202;
+  scale: 1.1;
+}
+#startButton:disabled:hover {
+  background-color: #a9a9a9;
+  scale: 1;
+  color: #ffffff;
+}
+
+#taskSection {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#taskText {
+  text-align: center;
+  margin: auto;
+  height: 25px;
+}
+#checkButton {
+  background-color: #63c9c9;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+}
+
+#checkButton:hover {
+  background-color: #afeeee;
+  cursor: pointer;
+}
+
+#checkButton.right {
+  background-color: #228b22;
+}
+
+#checkButton.wrong {
+  background-color: #fa8072;
+}
+
+#checkButton:disabled {
+  cursor: not-allowed;
+  background-color: #a9a9a9;
+}
+
+#currentTaskBlock {
+  display: flex;
+  height: 25px;
+  opacity: 0;
+  align-items: center;
+  margin: 2.5px 0;
+}
+
+#answerInput {
+  width: fit-content;
+  padding-left: 2px;
+  max-width: 35px;
+  max-height: 20px;
+  border-radius: 2px;
+  border: 0.9px solid #a9a9a9;
+  margin-left: 5px;
+  transition: border-color 0.5s ease, border 0.5s ease;
+  /* outline: none; */
+}
+#answerInput.right {
+  border-radius: 2px;
+  color: black;
+}
+#answerInput.wrong {
+  border-radius: 2px;
+  color: red;
+}
+#answerInput:focus {
+  border: 1.5px solid black;
+}
+
+#answerInput,
+::-webkit-outer-spin-button,
+#answerInput,
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#answerInput,
+[type="number"] {
+  -moz-appearance: textfield;
+}
+#answerInput:active {
+  border-radius: 2px;
+  border-color: #010202;
+}
+
+#colorBlock {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background-color: #228b22;
+  margin: 0 5px;
+}
+#hints {
+  align-items: center;
+  margin: 2.5px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 0.5s ease forwards;
+}
+
+#doneTasksBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#containerHints {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.doneTask {
+  height: 25px;
+  align-items: center;
+  text-align: center;
+  margin: 2.5px 0;
+}
+#completedTaskBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(99vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

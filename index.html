@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Математическая игра</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="game">
+      <label for="baseNumber">Choose a number to multiply:</label><br />
+      <input type="number" id="baseNumber" min="1" value="" /><br /><br />
+      <button id="startButton">Start exercise</button>
+
+      <div id="exercise">
+        <div id="taskSection" style="display: none">
+          <div id="doneTasksBlock">
+            <div id="completedTaskBlock"></div>
+            <div id="currentTaskBlock">
+              <p id="taskText"></p>
+              <input type="number" id="answerInput" />
+            </div>
+          </div>
+        </div>
+        <div id="containerHints"></div>
+      </div>
+      <button id="checkButton" disabled="true" style="display: none">
+        DONE
+      </button>
+
+      <p id="message"></p>
+    </div>
+  </body>
+</html>
